@@ -12,6 +12,8 @@
 		28F6F4EA1EF07B8F00D5B113 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F6F4E81EF07B8F00D5B113 /* Main.storyboard */; };
 		28F6F4EC1EF07B8F00D5B113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F6F4EB1EF07B8F00D5B113 /* Assets.xcassets */; };
 		28F6F4EF1EF07B8F00D5B113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F6F4ED1EF07B8F00D5B113 /* LaunchScreen.storyboard */; };
+		28F6F4FA1EF087D400D5B113 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F6F4F91EF087D400D5B113 /* GradientView.swift */; };
+		B5C3D6E4DAB18904C1582E77 /* Pods_Ridesharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96887A344D0B7BB805C0A12E /* Pods_Ridesharing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		28F6F4EB1EF07B8F00D5B113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28F6F4EE1EF07B8F00D5B113 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28F6F4F01EF07B8F00D5B113 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28F6F4F91EF087D400D5B113 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		31DFCE80A218ED4E800D4C03 /* Pods-Ridesharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ridesharing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ridesharing/Pods-Ridesharing.debug.xcconfig"; sourceTree = "<group>"; };
+		96887A344D0B7BB805C0A12E /* Pods_Ridesharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ridesharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBED48DBA033E868517157A0 /* Pods-Ridesharing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ridesharing.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ridesharing/Pods-Ridesharing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C3D6E4DAB18904C1582E77 /* Pods_Ridesharing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				28F6F4E31EF07B8F00D5B113 /* Ridesharing */,
 				28F6F4E21EF07B8F00D5B113 /* Products */,
+				E7B6FBC2DB9B65AEB158AE87 /* Pods */,
+				91DBA3C1EF94D8AE40A69470 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +63,56 @@
 		28F6F4E31EF07B8F00D5B113 /* Ridesharing */ = {
 			isa = PBXGroup;
 			children = (
+				28F6F4F81EF07E8500D5B113 /* Model */,
+				28F6F4F71EF07E8000D5B113 /* View */,
+				28F6F4F61EF07E7900D5B113 /* Controller */,
 				28F6F4E41EF07B8F00D5B113 /* AppDelegate.swift */,
-				28F6F4E61EF07B8F00D5B113 /* ViewController.swift */,
 				28F6F4E81EF07B8F00D5B113 /* Main.storyboard */,
 				28F6F4EB1EF07B8F00D5B113 /* Assets.xcassets */,
 				28F6F4ED1EF07B8F00D5B113 /* LaunchScreen.storyboard */,
 				28F6F4F01EF07B8F00D5B113 /* Info.plist */,
 			);
 			path = Ridesharing;
+			sourceTree = "<group>";
+		};
+		28F6F4F61EF07E7900D5B113 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				28F6F4E61EF07B8F00D5B113 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		28F6F4F71EF07E8000D5B113 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				28F6F4F91EF087D400D5B113 /* GradientView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		28F6F4F81EF07E8500D5B113 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		91DBA3C1EF94D8AE40A69470 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96887A344D0B7BB805C0A12E /* Pods_Ridesharing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7B6FBC2DB9B65AEB158AE87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31DFCE80A218ED4E800D4C03 /* Pods-Ridesharing.debug.xcconfig */,
+				EBED48DBA033E868517157A0 /* Pods-Ridesharing.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28F6F4F31EF07B8F00D5B113 /* Build configuration list for PBXNativeTarget "Ridesharing" */;
 			buildPhases = (
+				650FEAF6D04CA7267B732D00 /* [CP] Check Pods Manifest.lock */,
 				28F6F4DD1EF07B8F00D5B113 /* Sources */,
 				28F6F4DE1EF07B8F00D5B113 /* Frameworks */,
 				28F6F4DF1EF07B8F00D5B113 /* Resources */,
+				DF6CA7971FA006B969409CA9 /* [CP] Embed Pods Frameworks */,
+				D8F585DEEB7DD1CBC2A4335A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +186,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		650FEAF6D04CA7267B732D00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D8F585DEEB7DD1CBC2A4335A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ridesharing/Pods-Ridesharing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF6CA7971FA006B969409CA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ridesharing/Pods-Ridesharing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28F6F4DD1EF07B8F00D5B113 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +241,7 @@
 			files = (
 				28F6F4E71EF07B8F00D5B113 /* ViewController.swift in Sources */,
 				28F6F4E51EF07B8F00D5B113 /* AppDelegate.swift in Sources */,
+				28F6F4FA1EF087D400D5B113 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +362,7 @@
 		};
 		28F6F4F41EF07B8F00D5B113 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31DFCE80A218ED4E800D4C03 /* Pods-Ridesharing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BQ64AM57S3;
@@ -272,6 +376,7 @@
 		};
 		28F6F4F51EF07B8F00D5B113 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBED48DBA033E868517157A0 /* Pods-Ridesharing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BQ64AM57S3;
@@ -302,6 +407,7 @@
 				28F6F4F51EF07B8F00D5B113 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
