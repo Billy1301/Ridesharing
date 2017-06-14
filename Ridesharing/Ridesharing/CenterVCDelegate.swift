@@ -6,7 +6,7 @@
 //  Copyright © 2017 Billy. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol CenterVCDelegate {
     func toggleLeftPanel()
