@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		289E5EDA1EF8689A003111E6 /* UIViewsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E5ED91EF8689A003111E6 /* UIViewsExt.swift */; };
 		28F6F4E51EF07B8F00D5B113 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F6F4E41EF07B8F00D5B113 /* AppDelegate.swift */; };
 		28F6F4E71EF07B8F00D5B113 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F6F4E61EF07B8F00D5B113 /* HomeVC.swift */; };
 		28F6F4EA1EF07B8F00D5B113 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F6F4E81EF07B8F00D5B113 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		289E5ED91EF8689A003111E6 /* UIViewsExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewsExt.swift; sourceTree = "<group>"; };
 		28F6F4E11EF07B8F00D5B113 /* Ridesharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ridesharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F6F4E41EF07B8F00D5B113 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28F6F4E61EF07B8F00D5B113 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		289E5ED81EF86880003111E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				289E5ED91EF8689A003111E6 /* UIViewsExt.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		28F6F4D81EF07B8F00D5B113 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +87,7 @@
 		28F6F4E31EF07B8F00D5B113 /* Ridesharing */ = {
 			isa = PBXGroup;
 			children = (
+				289E5ED81EF86880003111E6 /* Extensions */,
 				28F6F5081EF1F1A800D5B113 /* Protocols */,
 				28F6F4F81EF07E8500D5B113 /* Model */,
 				28F6F4F71EF07E8000D5B113 /* View */,
@@ -275,6 +286,7 @@
 				28F6F5071EF1EF2B00D5B113 /* ContainerVC.swift in Sources */,
 				28F6F4E71EF07B8F00D5B113 /* HomeVC.swift in Sources */,
 				28F6F4FC1EF1B49000D5B113 /* RoundImageView.swift in Sources */,
+				289E5EDA1EF8689A003111E6 /* UIViewsExt.swift in Sources */,
 				28F6F4FE1EF1B59B00D5B113 /* RoundedShadowView.swift in Sources */,
 				28F6F4E51EF07B8F00D5B113 /* AppDelegate.swift in Sources */,
 				28F6F4FA1EF087D400D5B113 /* GradientView.swift in Sources */,
