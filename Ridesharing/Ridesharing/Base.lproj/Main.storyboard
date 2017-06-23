@@ -403,7 +403,7 @@
                                                 </textField>
                                             </subviews>
                                         </stackView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wc-HE-fNO">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wc-HE-fNO" customClass="RoundedShadowButton" customModule="Ridesharing" customModuleProvider="target">
                                             <rect key="frame" x="20" y="656" width="374" height="60"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -413,6 +413,9 @@
                                             <state key="normal" title="SIGN UP / LOGIN">
                                                 <color key="titleColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="authBtnWasPressed:" destination="UCD-Iz-75g" eventType="touchUpInside" id="Qed-85-o1Z"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -440,6 +443,12 @@
                             <constraint firstAttribute="trailing" secondItem="yb7-gy-pMW" secondAttribute="trailing" id="dd9-8M-hZc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authBtn" destination="8wc-HE-fNO" id="55b-Yx-zV0"/>
+                        <outlet property="emailField" destination="WZw-tH-O5D" id="Eqb-ba-8fy"/>
+                        <outlet property="passwordField" destination="POD-ZR-KB5" id="RaO-dx-Ov3"/>
+                        <outlet property="segmentedControl" destination="JYl-Zl-soH" id="7aq-Mp-YLm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjD-nv-A1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2855411C1EF9C00F00B56F6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2855411B1EF9C00F00B56F6A /* GoogleService-Info.plist */; };
+		2880F8E51EFD895600E1F572 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880F8E41EFD895600E1F572 /* DataService.swift */; };
 		289E5EDA1EF8689A003111E6 /* UIViewsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E5ED91EF8689A003111E6 /* UIViewsExt.swift */; };
 		289E5EDC1EF86E7A003111E6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E5EDB1EF86E7A003111E6 /* LoginVC.swift */; };
 		289E5EDE1EF8735E003111E6 /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E5EDD1EF8735E003111E6 /* RoundedCornerTextField.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2855411B1EF9C00F00B56F6A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2880F8E41EFD895600E1F572 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		289E5ED91EF8689A003111E6 /* UIViewsExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewsExt.swift; sourceTree = "<group>"; };
 		289E5EDB1EF86E7A003111E6 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		289E5EDD1EF8735E003111E6 /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
@@ -62,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2880F8E31EFD893C00E1F572 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2880F8E41EFD895600E1F572 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		289E5ED81EF86880003111E6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +103,7 @@
 		28F6F4E31EF07B8F00D5B113 /* Ridesharing */ = {
 			isa = PBXGroup;
 			children = (
+				2880F8E31EFD893C00E1F572 /* Services */,
 				289E5ED81EF86880003111E6 /* Extensions */,
 				28F6F5081EF1F1A800D5B113 /* Protocols */,
 				28F6F4F81EF07E8500D5B113 /* Model */,
@@ -100,6 +113,7 @@
 				28F6F4E81EF07B8F00D5B113 /* Main.storyboard */,
 				28F6F4EB1EF07B8F00D5B113 /* Assets.xcassets */,
 				28F6F4ED1EF07B8F00D5B113 /* LaunchScreen.storyboard */,
+				2855411B1EF9C00F00B56F6A /* GoogleService-Info.plist */,
 				28F6F4F01EF07B8F00D5B113 /* Info.plist */,
 			);
 			path = Ridesharing;
@@ -225,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F6F4EF1EF07B8F00D5B113 /* LaunchScreen.storyboard in Resources */,
+				2855411C1EF9C00F00B56F6A /* GoogleService-Info.plist in Resources */,
 				28F6F4EC1EF07B8F00D5B113 /* Assets.xcassets in Resources */,
 				28F6F4EA1EF07B8F00D5B113 /* Main.storyboard in Resources */,
 			);
@@ -286,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F6F50A1EF1F1BE00D5B113 /* CenterVCDelegate.swift in Sources */,
+				2880F8E51EFD895600E1F572 /* DataService.swift in Sources */,
 				28F6F5021EF1C45400D5B113 /* RoundedShadowButton.swift in Sources */,
 				289E5EDC1EF86E7A003111E6 /* LoginVC.swift in Sources */,
 				28F6F5051EF1EED100D5B113 /* LeftSidePanelVC.swift in Sources */,
