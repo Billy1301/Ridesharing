@@ -20,8 +20,9 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailField.delegate = (self as! UITextFieldDelegate)
-        passwordField.delegate = (self as! UITextFieldDelegate)
+        
+        emailField.delegate = self as? UITextFieldDelegate
+        passwordField.delegate = self as? UITextFieldDelegate
 
         view.bindToKeyboard()
         
@@ -58,19 +59,25 @@ class LoginVC: UIViewController {
                         print("Email auth successfully with Firebase")
                         self.dismiss(animated: true, completion: nil)
                     } else {
+                        
+                        if let errorCode = FIRAuthErrorCode(rawValue: error!._code) {
+                            switch errorCode {
+                            case .errorCodeWrongPassword:
+                                print("Wrong password")
+                            default:
+                                print("Unknown error occurred. Please try again")
+                            }
+                        }
+                        
                         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                             if error != nil {
                                 if let errorCode = FIRAuthErrorCode(rawValue: error!._code) {
                                     switch errorCode {
                                     case .errorCodeInvalidEmail:
-                                        print("Email invalid. Please try again.")
-                                    case .errorCodeEmailAlreadyInUse:
-                                        print("Email already in use.")
-                                    case .errorCodeWrongPassword:
-                                        print("Wrong password")
+                                        print("Invalid email")
                                     default:
                                         print("Unknown error occurred. Please try again")
-                                    }
+                                    }  
                                 }
                             } else {
                                 if let user = user {
