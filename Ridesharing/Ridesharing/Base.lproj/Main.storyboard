@@ -99,6 +99,9 @@
                                     <constraint firstAttribute="height" constant="69" id="hc0-fj-yue"/>
                                 </constraints>
                                 <state key="normal" image="centerMapBtn"/>
+                                <connections>
+                                    <action selector="centerMapBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="esO-vq-bxX"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wru-uD-X6C" customClass="RoundedShadowView" customModule="Ridesharing" customModuleProvider="target">
                                 <rect key="frame" x="20" y="73" width="374" height="80"/>
