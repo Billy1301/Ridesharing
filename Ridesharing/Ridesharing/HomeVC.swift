@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import RevealingSplashView
 
-class HomeVC: UIViewController, MKMapViewDelegate {
+class HomeVC: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var actionBtn: RoundedShadowButton!
@@ -77,6 +77,24 @@ extension HomeVC: CLLocationManagerDelegate {
             mapView.showsUserLocation = true
             mapView.userTrackingMode = .follow
         }
+    }
+}
+
+extension HomeVC: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        UpdateService.instance.updateUserLocation(withCoordinate: userLocation.coordinate)
+        UpdateService.instance.updateDriverLocation(withCoordinate: userLocation.coordinate)
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? DriverAnnotation {
+            let identifier = "driver"
+            var view: MKAnnotationView
+            view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.image = UIImage(named: "driverAnnotation")
+            return view
+        }
+        return nil
     }
 }
 
