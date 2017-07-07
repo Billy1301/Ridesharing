@@ -163,7 +163,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2T-oF-fc8">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="g2T-oF-fc8">
                                                 <rect key="frame" x="25" y="1.6666666666666714" width="309" height="21.999999999999986"/>
                                                 <color key="textColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -204,6 +204,9 @@
                     </view>
                     <connections>
                         <outlet property="actionBtn" destination="a5m-6P-Tgh" id="OrH-mj-ABY"/>
+                        <outlet property="centerMapBtn" destination="x7p-p3-WPR" id="km3-mF-hIh"/>
+                        <outlet property="destinationCircle" destination="pYa-yj-up2" id="EbM-Df-dkg"/>
+                        <outlet property="destinationTextField" destination="g2T-oF-fc8" id="Je5-aw-NUH"/>
                         <outlet property="mapView" destination="1o9-BW-Dih" id="YBt-PL-cTa"/>
                     </connections>
                 </viewController>
