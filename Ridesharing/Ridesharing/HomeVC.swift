@@ -30,7 +30,7 @@ class HomeVC: UIViewController {
     var matchingItems: [MKMapItem] = [MKMapItem]()
     var currentUserID = FIRAuth.auth()?.currentUser?.uid
     var selectedItemPlacemark: MKPlacemark? = nil
-    
+    var route: MKRoute!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -162,12 +162,30 @@ extension HomeVC: MKMapViewDelegate {
             view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.image = UIImage(named: "currentLocationAnnotation")
             return view
+        } else if let annotation = annotation as? MKPointAnnotation {
+            let identifier = "destination"
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            if annotationView == nil {
+                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            } else {
+                annotationView?.annotation = annotation
             }
+            annotationView?.image = UIImage(named: "destinationAnnotation")
+            return annotationView
+        }
         return nil
     }
     
     func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
         centerMapBtn.fadeTo(alphaValue: 1.0, withDuration: 0.2)
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let lineRenderer = MKPolylineRenderer(overlay: self.route.polyline)
+        lineRenderer.strokeColor = UIColor(red: 216/255, green: 71/255, blue: 30/255, alpha: 0.75)
+        lineRenderer.lineWidth = 3
+        
+        return lineRenderer
     }
     
     func performSearch() {
@@ -205,9 +223,24 @@ extension HomeVC: MKMapViewDelegate {
         let annotation = MKPointAnnotation()
         annotation.coordinate = placemark.coordinate
         mapView.addAnnotation(annotation)
+    }
+    
+    func searchMapKitForResultsWithPolyline(forMapItem mapItem: MKMapItem) {
+        let request = MKDirectionsRequest()
+        request.source = MKMapItem.forCurrentLocation()
+        request.destination = mapItem
+        request.transportType = MKDirectionsTransportType.automobile
         
+        let directions = MKDirections(request: request)
         
-        
+        directions.calculate { (response, error) in
+            guard let response = response else {
+                print(error.debugDescription)
+                return
+            }
+            self.route = response.routes[0]
+            self.mapView.add(self.route.polyline)
+        }
     }
 }
 
@@ -311,6 +344,8 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         DataService.instance.REF_USERS.child(currentUserID!).updateChildValues(["tripCorrdinate": [selectedMapItem.placemark.coordinate.latitude, selectedMapItem.placemark.coordinate.longitude]])
         
         dropPinFor(placemark: selectedMapItem.placemark)
+        
+        searchMapKitForResultsWithPolyline(forMapItem: selectedMapItem)
         
         animateTableView(shouldShow: false)
         print("selected")
