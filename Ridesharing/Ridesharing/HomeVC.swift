@@ -12,7 +12,7 @@ import CoreLocation
 import RevealingSplashView
 import Firebase
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, Alertable {
 
     @IBOutlet weak var centerMapBtn: UIButton!
     @IBOutlet weak var mapView: MKMapView!
@@ -119,7 +119,6 @@ class HomeVC: UIViewController {
         actionBtn.animateButton(shouldLoad: true, withMessage: nil)
     }
     
-    
     @IBAction func centerMapBtnPressed(_ sender: Any) {
         DataService.instance.REF_USERS.observeSingleEvent(of: .value, with: { (snapshot) in
             if let userSnapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
@@ -136,8 +135,6 @@ class HomeVC: UIViewController {
                 }
             }
         })
-        
-      
     }
     
     @IBAction func menuBtnPressed(_ sender: Any) {
@@ -212,9 +209,9 @@ extension HomeVC: MKMapViewDelegate {
         
         search.start { (response, error) in
             if error != nil {
-                print(error.debugDescription)
+                self.showAlert("An error occurred, please try again")
             } else if response?.mapItems.count == 0 {
-                print("No results!")
+                self.showAlert("No results, please search again for a different location.")
             } else {
                 for mapItem in response!.mapItems {
                     self.matchingItems.append(mapItem as MKMapItem)
@@ -250,7 +247,7 @@ extension HomeVC: MKMapViewDelegate {
         
         directions.calculate { (response, error) in
             guard let response = response else {
-                print(error.debugDescription)
+                self.showAlert(error.debugDescription)
                 return
             }
             self.route = response.routes[0]
@@ -399,7 +396,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         searchMapKitForResultsWithPolyline(forMapItem: selectedMapItem)
         
         animateTableView(shouldShow: false)
-        print("selected")
+//        print("selected")
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

@@ -550,6 +550,107 @@
             </objects>
             <point key="canvasLocation" x="1544.9275362318842" y="138.58695652173915"/>
         </scene>
+        <!--PickupVC-->
+        <scene sceneID="0RW-W3-yl8">
+            <objects>
+                <viewController storyboardIdentifier="PickupVC" id="wjG-nI-GN9" customClass="PickupVC" customModule="Ridesharing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B4b-7r-xBK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xre-Dq-Ynl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D7v-ky-clL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ehP-PU-AOW">
+                                <rect key="frame" x="104" y="40" width="207" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HTCH" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9If-hy-mGI">
+                                        <rect key="frame" x="0.0" y="0.0" width="103.66666666666666" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HKR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kb8-zw-u9R">
+                                        <rect key="frame" x="103.66666666666664" y="0.0" width="103.33333333333336" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="36"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MtX-P9-KtR"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="del-Ou-N8y" customClass="RoundedShadowButton" customModule="Ridesharing" customModuleProvider="target">
+                                <rect key="frame" x="20" y="656" width="374" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ZaJ-B9-fhc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="28"/>
+                                <state key="normal" title="ACCEPT TRIP">
+                                    <color key="titleColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="acceptTripBtnPressed:" destination="wjG-nI-GN9" eventType="touchUpInside" id="NAs-4P-Liw"/>
+                                    <action selector="authBtnWasPressed:" destination="UCD-Iz-75g" eventType="touchUpInside" id="fPA-9i-ztI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2i-Hh-B0z">
+                                <rect key="frame" x="20" y="40" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Dvw-in-bZ2"/>
+                                    <constraint firstAttribute="height" constant="30" id="dOM-Ee-dKc"/>
+                                </constraints>
+                                <state key="normal" image="cancelBtn"/>
+                                <connections>
+                                    <action selector="cancelBtnPressed:" destination="wjG-nI-GN9" eventType="touchUpInside" id="Lxq-0i-hjV"/>
+                                    <action selector="cancelBtnWasPressed:" destination="UCD-Iz-75g" eventType="touchUpInside" id="kO7-vn-JgR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you like to pick up this passenger?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBP-2X-Dge">
+                                <rect key="frame" x="20" y="612.66666666666652" width="374" height="23.333333333333371"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bKD-5k-pz9" customClass="RoundMapView" customModule="Ridesharing" customModuleProvider="target">
+                                <rect key="frame" x="45" y="206" width="325" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="0CX-Yr-Y8q"/>
+                                    <constraint firstAttribute="width" constant="325" id="cGl-RE-5lb"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="wjG-nI-GN9" id="0Os-gi-A5b"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.28797743055555558" blue="0.66105143229166663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ehP-PU-AOW" firstAttribute="centerX" secondItem="del-Ou-N8y" secondAttribute="centerX" id="41f-3g-0ZO"/>
+                            <constraint firstItem="jBP-2X-Dge" firstAttribute="trailing" secondItem="D7v-ky-clL" secondAttribute="trailingMargin" id="C8r-Lt-Rfc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="del-Ou-N8y" secondAttribute="trailing" id="FhN-Ns-XLc"/>
+                            <constraint firstItem="ehP-PU-AOW" firstAttribute="top" secondItem="B4b-7r-xBK" secondAttribute="bottom" constant="20" id="I5G-en-tIJ"/>
+                            <constraint firstItem="jBP-2X-Dge" firstAttribute="leading" secondItem="D7v-ky-clL" secondAttribute="leadingMargin" id="KR5-EK-Xcn"/>
+                            <constraint firstItem="X2i-Hh-B0z" firstAttribute="top" secondItem="B4b-7r-xBK" secondAttribute="bottom" constant="20" id="Ke5-E0-Z1P"/>
+                            <constraint firstItem="X2i-Hh-B0z" firstAttribute="leading" secondItem="D7v-ky-clL" secondAttribute="leading" constant="20" id="OWs-Tm-fj0"/>
+                            <constraint firstItem="Xre-Dq-Ynl" firstAttribute="top" secondItem="del-Ou-N8y" secondAttribute="bottom" constant="20" id="Z4m-wz-Myc"/>
+                            <constraint firstItem="bKD-5k-pz9" firstAttribute="centerX" secondItem="D7v-ky-clL" secondAttribute="centerX" id="ajq-Hw-bvk"/>
+                            <constraint firstItem="del-Ou-N8y" firstAttribute="centerX" secondItem="D7v-ky-clL" secondAttribute="centerX" id="cHb-Hl-pcT"/>
+                            <constraint firstItem="del-Ou-N8y" firstAttribute="leading" secondItem="D7v-ky-clL" secondAttribute="leadingMargin" id="dER-Cx-u7Q"/>
+                            <constraint firstItem="del-Ou-N8y" firstAttribute="top" secondItem="jBP-2X-Dge" secondAttribute="bottom" constant="20" id="fmG-7u-ONw"/>
+                            <constraint firstItem="bKD-5k-pz9" firstAttribute="centerY" secondItem="D7v-ky-clL" secondAttribute="centerY" id="hlD-YL-nwS"/>
+                            <constraint firstItem="ehP-PU-AOW" firstAttribute="leading" secondItem="X2i-Hh-B0z" secondAttribute="trailing" constant="54" id="yvd-WU-fwe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickupMapView" destination="bKD-5k-pz9" id="2og-ge-ObR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0K-MG-yjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2291" y="137"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cancelBtn" width="32" height="31"/>
