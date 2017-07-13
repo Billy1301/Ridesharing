@@ -14,9 +14,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var emailField: RoundedCornerTextField!
     @IBOutlet weak var passwordField: RoundedCornerTextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
     @IBOutlet weak var authBtn: RoundedShadowButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

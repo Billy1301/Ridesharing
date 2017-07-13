@@ -29,7 +29,7 @@ class ContainerVC: UIViewController {
     var currentState: SlideOutState = .collapsed
     
     var isHidden = false
-    let centerPanelexpandedOffset: CGFloat = 160
+    let centerPanelexpandedOffset: CGFloat = 60
     
     var tap: UITapGestureRecognizer!
     
@@ -130,6 +130,7 @@ extension ContainerVC: CenterVCDelegate {
         whiteCoverView.tag = 25
         
         self.centerController.view.addSubview(whiteCoverView)
+       
         whiteCoverView.fadeTo(alphaValue: 0.75, withDuration: 0.2)
         
         tap = UITapGestureRecognizer(target: self, action: #selector(animateLeftPanel(shouldExpand:)))

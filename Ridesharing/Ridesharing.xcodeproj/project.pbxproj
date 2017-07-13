@@ -15,6 +15,7 @@
 		289E5EDC1EF86E7A003111E6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E5EDB1EF86E7A003111E6 /* LoginVC.swift */; };
 		289E5EDE1EF8735E003111E6 /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E5EDD1EF8735E003111E6 /* RoundedCornerTextField.swift */; };
 		28CDBC5B1F10403E00995D06 /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CDBC5A1F10403E00995D06 /* PassengerAnnotation.swift */; };
+		28CDBC5D1F1062F600995D06 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CDBC5C1F1062F600995D06 /* UIViewControllerExt.swift */; };
 		28F6F4E51EF07B8F00D5B113 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F6F4E41EF07B8F00D5B113 /* AppDelegate.swift */; };
 		28F6F4E71EF07B8F00D5B113 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F6F4E61EF07B8F00D5B113 /* HomeVC.swift */; };
 		28F6F4EA1EF07B8F00D5B113 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F6F4E81EF07B8F00D5B113 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		289E5EDB1EF86E7A003111E6 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		289E5EDD1EF8735E003111E6 /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
 		28CDBC5A1F10403E00995D06 /* PassengerAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
+		28CDBC5C1F1062F600995D06 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		28F6F4E11EF07B8F00D5B113 /* Ridesharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ridesharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F6F4E41EF07B8F00D5B113 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28F6F4E61EF07B8F00D5B113 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				289E5ED91EF8689A003111E6 /* UIViewsExt.swift */,
+				28CDBC5C1F1062F600995D06 /* UIViewControllerExt.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				28F6F50A1EF1F1BE00D5B113 /* CenterVCDelegate.swift in Sources */,
 				2880F8E51EFD895600E1F572 /* DataService.swift in Sources */,
+				28CDBC5D1F1062F600995D06 /* UIViewControllerExt.swift in Sources */,
 				28F6F5021EF1C45400D5B113 /* RoundedShadowButton.swift in Sources */,
 				289E5EDC1EF86E7A003111E6 /* LoginVC.swift in Sources */,
 				28F6F5051EF1EED100D5B113 /* LeftSidePanelVC.swift in Sources */,
