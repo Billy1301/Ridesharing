@@ -26,6 +26,8 @@ extension UIViewController {
             view.addSubview(fadeView!)
             fadeView?.addSubview(spinner)
             
+            spinner.startAnimating()
+            
             fadeView?.fadeTo(alphaValue: 0.7, withDuration: 0.2)
             
         } else {
